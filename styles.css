@@ -1,0 +1,52 @@
+@property --a{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 90deg;
+}
+@property --l{
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
+}
+@property --c{
+  syntax: '<color>';
+  inherits: false;
+  initial-value: red;
+}
+
+h1, h2, .blue, .green {
+  background-color: #2B90B6;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  width: fit-content;
+}
+
+h1.title{
+  margin: auto !important;
+}
+
+h1, .blue {
+  background-image: linear-gradient(var(--a), #4EC5D4 0%,#146b8c 100%);
+  animation: rotate 10s linear infinite forwards;
+}
+
+h2, .green {
+  background-image: linear-gradient(var(--a), #4ed47d 0%,#0d5f29 100%);
+  animation: rotate 10s linear infinite forwards;
+}
+
+@keyframes rotate {
+  0%{
+    --a: 0turn;
+  }
+  50%{
+    --a: 0.5turn;
+  }
+  
+  100%{
+    --a: 1turn;
+  }
+}
