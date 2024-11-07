@@ -75,6 +75,49 @@ Here is a table of contents:
 
 ---
 
+# A Brief history on piano transcription
+
+```mermaid
+flowchart LR
+  A["2016<br>Siddharth Sigtia et al. <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>An End-to-End Neural Network for Polyphonic Piano Music Transcription</b>"]
+  B["2018<br>Curtis Hawthorne et al. <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>Onsets and Frames</b>"]
+  C["2018<br>Curtis Hawthorne et al. <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>Enabling Factorized Piano Music Modeling and Generation with the MAESTRO Dataset</b>"]
+  D["2021<br>Qiuqiang Kong et al.    <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>High-Resolution Piano Transcription With Pedals by Regressing Onset and Offset Times</b>"]
+  E["2023<br>Wei -Tsung Lu et al.    <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>Multitrack Music Transcription with a Time-Frequency Perceiver</b>"]
+  F["2023<br>Dasol Lee et al.        <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>Reducing latency of neural automatic piano transcription models</b>"]
+  G["2023<br>Andres Fernandez        <br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4EC5D4 0%,#146b8c 100%);'>Onsets and Velocities</b>"]
+  A --> B --> C --> D
+  E --> F --> G
+```
+
+<br/>
+<p v-click class="green" style="margin:auto; font-size: 2em; height: 150%;">Velocity is important</p>
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# A Brief history on piano transcription \[2\]
+
+
+```mermaid
+flowchart TD
+A[Audio] --> M[MEL] --> B[Onset Detection Posteriorgram]
+M --> C[Offset Detection Posteriorgram]
+
+B & C --> F[Predictions]
+```
+
+<p class="blue" style="margin:auto; margin-top: 0.5em; font-size: 2em;"><a href="https://goo.gl/magenta/onsets-frames-examples">Onsets And Frames</a></p>
+
+::right::
+
+<img src="/images/onf.png" style="height: 100%"/>
+
+
+---
+
 # To who:
 
 <v-clicks>
@@ -82,7 +125,7 @@ Here is a table of contents:
 - Music students (All levels)
 - Music teachers
 - Music schools
-- Aspiring & Professional Composers
+- Composers
 </v-clicks>
 
 
@@ -150,10 +193,11 @@ image: /images/piano-vr.webp
 </v-clicks>
 
 
-# Threats
-<v-clicks>
+# Threats {.red}
+<v-clicks depth=2>
 
 - Competition: Speed to market
+  - No other VR app does transcription at the moment
 - Tech limitations
 </v-clicks>
 
@@ -164,16 +208,29 @@ li {
 img {
   width: 80%;
   position: absolute;
-  clip: rect(1px, 283px, 170px, 1px);
+  clip: rect(20px, 283px, 170px, 1px);
 }
 </style>
+
+<!-- 
+
+- Growing music market [click] 
+- [click] Could expand to not only music education, but also music production, gaming, etc.
+- [click] By licensing the software to music schools, we could reach a larger audience and have a more stable income.
+- [click] Music education is not a niche market: 1.7% of the population studies music, 15% of them study piano.
+
+
+Threats
+- [click] With the AI boom, competition is fierce. Speed to market is crucial.
+- [click] Tech limitations: Latency, accuracy, etc. But also compute.
+-->
 
 ---
 layout: image-left
 image: /images/piano-vr2.jpg
 ---
 
-# Weaknesses
+# Weaknesses {.red}
 <v-clicks>
 
 - High development costs
@@ -191,6 +248,18 @@ image: /images/piano-vr2.jpg
 - <v-click> Realtime transcription </v-click> <v-click> & Low latency </v-click> <v-click> = <strong class="blue">Realtime Feedback</strong> </v-click>
 
 
+<!--
+
+Weaknesses
+- [click] The software is complex and requires a lot of development. **High model training cost**
+- [click] If not done correctly, user onboarding could be a nightmare.
+- [click] Unique product: There are no other products that offer realtime piano transcription.
+
+Strength
+- The best thing we have is [click] physical instrument support.
+
+-->
+
 ---
 layout: image
 image: /images/use-cases.jpg
@@ -198,6 +267,31 @@ image: /images/use-cases.jpg
 
 # Use cases
 
+<v-click>
+
+```mermaid
+flowchart LR
+A["2024<br>Drew Edwards et al.<br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4ed47d 0%,#0d5f29 100%);'>A Data-Driven Analysis of Robust Automatic Piano Transcription</b>"]
+```
+</v-click>
+
+<v-click>
+
+```mermaid
+flowchart LR
+A["2024<br>Taegyun Kwon et al.<br><b style='width: fit-content;-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-image: linear-gradient(45deg, #4ed47d 0%,#0d5f29 100%);'>Towards Efficient and Real-Time Piano Transcription Using Neural Autoregressive Models</b>"]
+```
+</v-click>
+
+<!-- 
+(Explain the use cases)
+- [click] Generalization
+- [click] Realtime
+-->
+
+---
+layout: two-cols
+layoutClass: gap-16
 ---
 
 
@@ -211,6 +305,35 @@ image: /images/use-cases.jpg
 
 </v-clicks>
 
+::right::
+
+<div class="abc">
+  <img src="/images/web.png"/>
+  <br/>
+  <br/>
+  <img src="/images/windows.png"/>
+  <img src="/images/meta.png"/>
+</div>
+
+<style>
+  div.abc{
+    /* display:flex;
+    flex-direction: column; */
+  }
+  img{
+    filter: drop-shadow(2px 4px 6px white);
+    height: 150px;
+    margin: auto
+  }
+</style>
+
+<!-- 
+How to give the product to the user.
+- [click] Web: Easy to use, but limited by the browser.
+- [click] Oculus Quest: High quality, but requires a headset.
+- [click] Native PC App: High quality, but requires a computer.
+-->
+
 ---
 
 # Problem: $$?
@@ -221,6 +344,14 @@ image: /images/use-cases.jpg
 - Organizations: Licensing
 
 </v-clicks>
+
+<!--
+
+- [click] Individuals: One-time purchase
+- [click] Organizations: Licensing
+- [click] Could also offer a subscription model
+
+-->
 
 ---
 
@@ -238,3 +369,68 @@ image: /images/use-cases.jpg
   - Expand to other markets
 
 </v-clicks>
+
+<!--
+
+- MVP
+- 1 year plan
+
+-->
+
+---
+
+# Infrastructure
+
+<v-clicks>
+
+- Require AR glasses
+- Require a piano
+- Require a computer
+
+</v-clicks>
+
+<!--
+Infrastructure is a big part of the product.
+
+We could consider partnering with VR companies to provide the glasses, or even provide them ourselves.
+-->
+
+---
+
+# Problem: Costs
+
+<v-clicks>
+
+- Development
+- Marketing
+- Server + App Maintenance
+- Hiring a team
+
+</v-clicks>
+
+<!-- 
+- [click] Development: High cost; This includes model training, app development, etc.
+- [click] Marketing: High cost
+- [click] Server + App Maintenance: High cost
+- [click] Could also consider hiring a team of developers, or outsourcing the work.
+
+-->
+
+---
+layout: image
+image: /images/piano.jpeg
+---
+
+# Thank you!
+
+<GithubLink/>
+
+---
+
+# AR Demo
+
+<SlidevVideo autoplay='once' autoreset='slide'>
+  <source src="/images/piano-sync-gif.mp4" type="video/mp4"/>
+</SlidevVideo>
+
+---
