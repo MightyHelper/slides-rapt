@@ -12,15 +12,11 @@ overviewSnapshots: true
 # Realtime piano transcription {.title}
 
 <br/>
-A tool for music students and teachers
+A tool for music students, teachers and everyone who loves music.
 
 <div class="abs-br" style="width: 320px; height: 50px; overflow: hidden; border-radius: 0.5em;filter: drop-shadow(2px 4px 6px gray);box-shadow: 1px 1px 3px 1px #0000007d;">
   <img src="/images/uncuyo.png" width=395 height=150 style="width: 320px; background: #aaa3; overflow: hidden; position: absolute; top: -35px; left: 0;"/>
 </div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 transition: fade-out
@@ -93,6 +89,18 @@ flowchart LR
 <br/>
 <p v-click class="green" style="margin:auto; font-size: 2em; height: 150%;">Velocity is important</p>
 
+<!--
+
+- 2016: First End-to-end NN solution
+- 2018: Onsets and Frames!
+- 2018: MAESTRO dataset
+- 2021: High resolution
+- 2023: Multitrack: Multiple instruments
+- 2023: Latency
+- 2023: Velocities
+
+-->
+
 ---
 layout: two-cols
 layoutClass: gap-16
@@ -116,9 +124,18 @@ B & C --> F[Predictions]
 <img src="/images/onf.png" style="height: 100%"/>
 
 
+<!--
+
+- Audio
+- MEL
+- Onset & Offset Detection
+- Predictions (Decoding)
+
+-->
+
 ---
 
-# To who:
+# Problem: To who
 
 <v-clicks>
 
@@ -126,6 +143,7 @@ B & C --> F[Predictions]
 - Music teachers
 - Music schools
 - Composers
+- Developers (B2B)
 </v-clicks>
 
 
@@ -133,7 +151,7 @@ B & C --> F[Predictions]
 
 ## Other markets:
 
-- Gaming
+- <v-click>Gaming</v-click>
 
 <v-click>
 <Youtube id="jyR1W3X9s74?start=205&end=213&mute=1&loop=1&autoplay=1&controls=0&playlist=jyR1W3X9s74" />
@@ -160,6 +178,7 @@ Le vamos a vender a
   - 3500000000 * 0.018 = 63.000.000 profesores de musica
 - [click] clases online, en tiempo real, telepresencia.
 - [click] transcribir, rapidamente, no preocuparse por la transcripcion.
+- [click] Implementar su propia aplicacion sobre nuestra API
 
 Otras oportunidades:
 - [click] Juegos
@@ -183,15 +202,12 @@ image: /images/piano-vr.webp
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
 <v-clicks>
 
-- Clould expand to other markets
+- Experienced dev team
 - Could partner with music schools
 - Music education is not a niche market
 </v-clicks>
-
 
 # Threats {.red}
 <v-clicks depth=2>
@@ -199,6 +215,7 @@ image: /images/piano-vr.webp
 - Competition: Speed to market
   - No other VR app does transcription at the moment
 - Tech limitations
+
 </v-clicks>
 
 <style>
@@ -206,7 +223,7 @@ li {
   position: relative;
 }
 img {
-  width: 80%;
+  width: 60%;
   position: absolute;
   clip: rect(20px, 283px, 170px, 1px);
 }
@@ -215,13 +232,14 @@ img {
 <!-- 
 
 - Growing music market [click] 
-- [click] Could expand to not only music education, but also music production, gaming, etc.
+- [click] Experienced dev team; Could expand to not only music education, but also music production, gaming, etc.
 - [click] By licensing the software to music schools, we could reach a larger audience and have a more stable income.
 - [click] Music education is not a niche market: 1.7% of the population studies music, 15% of them study piano.
 
 
 Threats
 - [click] With the AI boom, competition is fierce. Speed to market is crucial.
+  - [click] Unique for now
 - [click] Tech limitations: Latency, accuracy, etc. But also compute.
 -->
 
@@ -284,7 +302,7 @@ A["2024<br>Taegyun Kwon et al.<br><b style='width: fit-content;-webkit-backgroun
 </v-click>
 
 <!-- 
-(Explain the use cases)
+(Explain the use cases) How can we know we can get all 3?
 - [click] Generalization
 - [click] Realtime
 -->
@@ -342,6 +360,7 @@ How to give the product to the user.
 
 - Individuals: One-time purchase
 - Organizations: Licensing
+- Developers: API access subscription
 
 </v-clicks>
 
@@ -424,12 +443,13 @@ image: /images/piano.jpeg
 # Thank you!
 
 <GithubLink/>
+<a href="https://soundcloud.com/mighty_helper/random-improvs-yama00">Music!</a>
 
 ---
 
 # AR Demo
 
-<SlidevVideo autoplay='once' autoreset='slide'>
+<SlidevVideo v-click autoplay='once' autoreset='click'>
   <source src="/images/piano-sync-gif.mp4" type="video/mp4"/>
 </SlidevVideo>
 
