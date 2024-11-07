@@ -442,9 +442,11 @@ image: /images/piano.jpeg
 
 # Thank you!
 
-<GithubLink/>
-<a href="https://soundcloud.com/mighty_helper/random-improvs-yama00">Music!</a>
-
+<div class="abs-br m-5">
+  <a href="https://github.com/MightyHelper"><CarbonLogoGithub /> github.com/MightyHelper </a>
+  <br/>
+  <a href="https://soundcloud.com/mighty_helper/random-improvs-yama00"><CarbonMusic />Music!</a>
+</div>
 ---
 
 # AR Demo
