@@ -14,7 +14,7 @@
   initial-value: red;
 }
 
-h1, h2, .blue, .green, .red {
+h1, h2, .blue, .green, .red, .purple {
   background-color: #2B90B6;
   background-size: 100%;
   -webkit-background-clip: text;
@@ -40,6 +40,11 @@ h2, .green {
 
 h3, .red {
   background-image: linear-gradient(var(--a), #d44e4e 0%,#5f500d 100%);
+  animation: rotate 10s linear infinite forwards;
+}
+
+h4, .purple {
+  background-image: linear-gradient(var(--a), #bc2fb7 0%,#540d5f 100%);
   animation: rotate 10s linear infinite forwards;
 }
 

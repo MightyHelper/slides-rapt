@@ -17,7 +17,9 @@ A tool for music students, teachers and everyone who loves music.
 <div class="abs-br" style="width: 320px; height: 50px; overflow: hidden; border-radius: 0.5em;filter: drop-shadow(2px 4px 6px gray);box-shadow: 1px 1px 3px 1px #0000007d;">
   <img src="/images/uncuyo.png" width=395 height=150 style="width: 320px; background: #aaa3; overflow: hidden; position: absolute; top: -35px; left: 0;"/>
 </div>
-
+<div class="abs-bl purple">
+  Federico Williamson
+</div>
 ---
 transition: fade-out
 ---
